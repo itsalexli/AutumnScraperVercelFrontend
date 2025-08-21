@@ -215,7 +215,9 @@ Return ONLY a JSON object with category names as keys and arrays of exact item n
     setCurrentStep("loading");
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
+      const apiUrl =
+        process.env.NEXT_PUBLIC_API_URL ||
+        "https://pricelistbackend.onrender.com";
       const response = await fetch(`${apiUrl}/scrape`, {
         method: "POST",
         headers: {
